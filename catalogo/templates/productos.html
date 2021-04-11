@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Productos</title>
+    </head>
+
+    <body>
+        <table border="1">
+            <td>"Factory Products"</td>
+            <tr>
+                <th>Grupo</th><th>Imagen</th><th>Descripcion</th>
+            </tr>
+            {% for p in productos %}
+                <tr>
+                    <td>{{ p.grupo }}</td>
+                    <td><img src="{{ p.imagen }}" width="150px"></td>
+                    <td>{{ p.descripcion }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <table border="1">
+            <td>"Factory Bodys"</td>
+
+
+            
+
+            {% for c in cuerpos %}
+                <tr>
+                    <td>{{ c.brazos }}</td>
+                    <td><img src="{{ c.imgcuerpo }}" width="150px"></td>
+                    <td>{{ c.descripcion }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>
