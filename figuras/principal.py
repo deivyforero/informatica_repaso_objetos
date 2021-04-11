@@ -2,13 +2,22 @@
 from punto import Punto
 from circulo import Circulo
 from cuadrado import Cuadrado
+from triangulo import Triangulo
 
-cuadrado = Cuadrado(Punto(1, 1), Punto(2, 6))
-cuadrado.calcular_area()
 
-cuadrado.mostrar_area()
+p1 = Punto(1, 1)
+p2 = Punto(2, 6)
 
-circulo = Circulo(Punto(10, 10), Punto(5, 5))
-circulo.calcular_area()
+opcion = input("Con que figura desea trabajar \n 1. Cuadrado \n 2. Circulo \n 3. Triangulo ")
 
-circulo.mostrar_area()
+if opcion == '1':
+    figura = Cuadrado(p1, p2)
+elif opcion == '2':
+    figura = Circulo(p1, p2)
+else: 
+    figura = Triangulo(p1, p2)
+
+figura.calcular_area()
+figura.mostrar_area()
+figura.calcular_perimetro()
+figura.mostrar_perimetro()
